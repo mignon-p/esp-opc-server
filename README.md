@@ -29,7 +29,7 @@ Once you know the IP address, you can connect with any Open Pixel
 Control client.  The [openpixelcontrol repository][10] has some
 [clients in Python][11], and I have [a client in Haskell][12].
 
-##Caveats
+## Caveats
 
 This example is a nice proof-of-concept, but there are a couple of
 reasons it isn't a robust solution.
