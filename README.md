@@ -25,9 +25,9 @@ It may also be useful to call [WiFi.hostname()][13] to assign a
 hostname to your ESP board.  This may show up as `hostname.lan` in
 your DNS, although it [depends on your router][14].
 
-Once you know the IP address, you can connect with any Open Pixel
-Control client.  The [openpixelcontrol repository][10] has some
-[clients in Python][11], and I have [a client in Haskell][12].
+Once you know the IP address or hostname, you can connect with any
+Open Pixel Control client.  The [openpixelcontrol repository][10] has
+some [clients in Python][11], and I have [a client in Haskell][12].
 
 ## Caveats
 
@@ -41,10 +41,10 @@ problem could be alleviated by using [DotStars][15] instead of
 NeoPixels, because DotStars are not timing-sensitive and do not need
 to disable interrupts.)
 
-Second, Open Pixel Control runs over TCP, and TCP is not the best for
-real-time applications.  If a packet is lost, TCP will retransmit it,
-[delaying the packets after it][16].  [UDP][17] would be more suitable
-for this application.
+Second, Open Pixel Control runs over TCP, and
+[TCP is not the best for real-time applications][16].  If a packet is
+lost, TCP will retransmit it, delaying the packets after it.
+[UDP][17] would be more suitable for this application.
 
 [1]: https://www.arduino.cc/
 [2]: http://openpixelcontrol.org/
